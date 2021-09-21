@@ -86,13 +86,13 @@ download_hostname() {
     #udp ==> https://downloads.nordcdn.com/configs/files/ovpn_udp/servers/nl601.nordvpn.com.udp.ovpn
     #tcp ==> https://downloads.nordcdn.com/configs/files/ovpn_tcp/servers/nl542.nordvpn.com.tcp.ovpn
 
-    local nordvpn_cdn="https://downloads.nordcdn.com/configs/files"     
+    local nordvpn_cdn="https://downloads.nordcdn.com/configs/files/ovpn_legacy/servers/"     
 
-    if [[ ${NORDVPN_PROTOCOL,,} == udp ]]; then
-        nordvpn_cdn="${nordvpn_cdn}/ovpn_udp/servers/"
-    elif [[ ${NORDVPN_PROTOCOL,,} == tcp ]];then
-        nordvpn_cdn="${nordvpn_cdn}/ovpn_tcp/servers/"
-    fi
+   # if [[ ${NORDVPN_PROTOCOL,,} == udp ]]; then
+    #    nordvpn_cdn="${nordvpn_cdn}/ovpn_udp/servers/"
+    #elif [[ ${NORDVPN_PROTOCOL,,} == tcp ]];then
+     #   nordvpn_cdn="${nordvpn_cdn}/ovpn_tcp/servers/"
+    #fi
 
     if [[ "$1" == "-d" ]]; then
         nordvpn_cdn=${nordvpn_cdn}${2}
